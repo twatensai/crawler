@@ -26,7 +26,11 @@ Les paramètres du crawler sont :
 ## Fonctionnalité du crawler
 
 Le crawler respecte le fichier robots.txt et sauvegarde dans un dictionnaire les fichiers robots.txt déjà parcouru lié à la base de l'URL. Si une base d'un URL est connu dans ce dictionnaire, le crawler vérifie juste qu'il a le droit de crawler avec le fichier robots.txt qu'il a en mémoire.
+
 Le crawler respecte la politeness, celle-ci est fixé à 3 secondes entre chaque appel, auquel on soustrait la vitesse de téléchargement de la dernière page.
+
 Le crawler peut lire le fichier sitemap si celui-ci est renseigné dans le fichier robots.txt, il parcourt toute l'arborescence du celui-ci.
+
 Une base de données relationnelle (DataFrame Pandas) est créée et stocke l'URL des pages web trouvées ainsi que la date de crawling (age). (Il sera possible facilement de lier cela à une base Postgre ou autres. Pas implémenté)
+
 Le crawler ne permet pas le multithreading. Il aurait fallu changer la gestion de la Queue, instaurer un timeout sur le get, j'ai essayé mais le code avait quelques soucis.
