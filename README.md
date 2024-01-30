@@ -23,7 +23,7 @@ Les paramètres du crawler sont :
 - Le nombre maximum de liens que l'on veut récupérer sur une page web identifié par la variable `max_links`. Ce champ est optionnel, il peut prendre des valeurs entières supérieures ou égales à zéro. Zéro signifiant qu'on ne veut récupérer aucun lien. Il est possible de mettre ce paramètre à 'all' pour récupérer tous les liens issues d'une page web. Sa valeur par défaut est 5.
 - Si on souhaite récupérer les fichiers sitemap.xml à partir du fichier robots.txt, la variable `use_sitemap` permet de le faire. Ce champ est optionnel. Sa valeur par défaut est True, la mettre à False pour désactiver cette fonctionnalité.
 
-## Fonctionnalité du crawler
+## Fonctionnalités du crawler
 
 Le crawler respecte le fichier robots.txt et sauvegarde dans un dictionnaire les fichiers robots.txt déjà parcouru lié à la base de l'URL. Si une base d'un URL est connu dans ce dictionnaire, le crawler vérifie juste qu'il a le droit de crawler avec le fichier robots.txt qu'il a en mémoire.
 
